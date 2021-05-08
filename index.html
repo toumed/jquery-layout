@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 06</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9d45baf70e.js" crossorigin="anonymous"></script>    
+  </head>
+  <body>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        /*<![CDATA[*/
+        $(document).ready(function() {
+
+            $("body").append("<div id='nav'></div>")
+
+            $("#nav").append("<i class='fas fa-bars fa-lg'></i>")
+            $("#nav").append("<span id='home'>Home</span>")
+            $("#nav").append("<i class='fas fa-ellipsis-h fa-lg'></i>")
+
+            $("#nav").after("<div id='about'></div>")
+            $("#about").append("<div id='about-section'></div>")
+
+            $("#about").append("<div class='pfp'><img src ='images/spiderman.png' id='spidey'></div>")
+            $(".pfp").addClass("spidey")
+
+            $("#about").append("<h3 id='name'>Peter Parker</h3>")
+            $("#about").append("<div id='bio'><p>Your friendly neighbourhood Spider-Man <i class='far fa-grin-wink'></i></p></div>")
+            
+            $("#about").after("<div id='posts'></div>")
+            $("#posts").append("<div id='post-first'></div>")
+
+            $("#posts").before("<div id='button'><span id='follow'>Follow</span></div>")
+            var style = {"background-color": "#2e68e6", "color": "white"};
+            $("#follow").css(style);
+
+            $("#post-first").append("<div class='content'><p>With great power comes great responsibilty...<p></div>")
+            $("#post-first").prepend("<div class='date'><p>Yesterday</p></div>")
+            $("#post-first").append("<span class='heart'><i class='fas fa-heart'></i></span> 1M ")
+            $("#post-first").append("<i class='fas fa-comment'></i> 75k")
+
+            var red = {"color": "red"};
+            $(".heart").css(red);
+
+            $("#post-first").after("<div id='post-second'></div>")
+            $("#post-second").append("<div class='content'><p>Peter uploaded 4 new photos: Avengers Assemble!</p></div>")
+            $("#post-second").append("<div class='image-gallery'></div>")
+
+            $(".image-gallery").append("<img src ='images/iron.png' height=100px>", "<img src ='images/thor.png' height=100px>", "<img src ='images/cap.png' height=100px>", "<img src ='images/widow.jpg' height=100px>" )
+
+            $("#post-second").prepend("<div class='date'><p>2 days ago</p></div>")
+            $("#post-second").append("<i class='fas fa-heart'></i> 2M ")
+            $("#post-second").append("<i class='fas fa-comment'></i> 100k")
+        });
+        /*]]>*/
+    </script>
+
+  </body>
+</html>
